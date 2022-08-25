@@ -3,7 +3,7 @@ require_relative 'person'
 class Student < Person
   attr_accessor :classroom
 
-  def initialize(name = 'Unknown', age = 0, classroom = 'Unknown', parent_permission: true)
+  def initialize(age, classroom , pname = 'Unknown', arent_permission: true)
     super(name, age, parent_permission: parent_permission)
     @classroom = classroom
   end

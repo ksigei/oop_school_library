@@ -7,7 +7,7 @@ class Person < Nameable
   attr_accessor :name, :age, :id, :rentals
   attr_reader :parent_permission
 
-  def initialize(name = 'Unknown', age = 0, parent_permission: true)
+  def initialize(age, name = 'Unknown', parent_permission: true)
     @name = name
     @age = age
     @parent_permission = parent_permission
