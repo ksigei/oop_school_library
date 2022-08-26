@@ -83,7 +83,7 @@ class App
 
     if @user_input == '1'
       age, name, has_parent_permission = student_info
-      person = Student.new(age, @default_classroom, name, parent_permission: has_parent_permission)
+      person = Student.new(age, name, parent_permission: has_parent_permission)
     else
       age, name, specialization = teacher_info
       person = Teacher.new(age, specialization, name)
@@ -199,7 +199,7 @@ class App
   def run
     loop do
       case user_input
-      when '10', '2', '6'
+      when '1', '2', '6'
         display_for_user(user_input)
       when '3', '4', '5'
         create_for_user(user_input)
