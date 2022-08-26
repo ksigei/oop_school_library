@@ -15,8 +15,3 @@ class Classroom
     student.classroom = self
   end
 end
-
-classroom = Classroom.new('A')
-student = Student.new('John')
-classroom.add_student(student)
-puts classroom.students.first.classroom.label
