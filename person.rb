@@ -33,4 +33,3 @@ class Person < Nameable
     rental.person = self
   end
 end
-

@@ -16,13 +16,13 @@ describe Person do
       expect(@person.add_rental(rental)).to eq([rental])
     end
   end
-  # check if the person is of age
+
   describe '#of_age?' do
     it 'should return true if the person is of age' do
       expect(@person.of_age?).to eq(true)
     end
   end
-  # check if the person is of age
+
   describe '#can_use_services?' do
     it 'should return true if the person is of age' do
       expect(@person.can_use_services?).to eq(true)
