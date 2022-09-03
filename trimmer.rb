@@ -5,3 +5,4 @@ class TrimmerDecorator < Decorator
     @nameable.correct_name.strip
   end
 end
+
