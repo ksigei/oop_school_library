@@ -1,8 +1,3 @@
-require_relative 'app'
-require_relative 'menu'
-
-def main
-  newapp = App.new
-  newapp.menu
-end
-main
+require './app'
+app = App.new
+app.show_menu
