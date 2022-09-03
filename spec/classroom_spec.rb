@@ -12,10 +12,4 @@ describe Classroom do
       expect(@classroom.label).to eq('English')
     end
   end
-  describe '#add_student' do
-    it 'should add a student to the classroom' do
-      student = double('student')
-      expect(@classroom.add_student(student)).to eq([student])
-    end
-  end
 end

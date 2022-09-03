@@ -10,12 +10,6 @@ describe Person do
       expect(@person.age).to eq(20)
     end
   end
-  describe '#add_rental' do
-    it 'should add a rental to the person' do
-      rental = double('rental')
-      expect(@person.add_rental(rental)).to eq([rental])
-    end
-  end
 
   describe '#of_age?' do
     it 'should return true if the person is of age' do
