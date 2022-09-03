@@ -1,0 +1,1 @@
+[{"id":1,"name":"Joan","age":"22","permissions":null,"specialization":null,"type":"Teacher"},{"id":2,"name":"Msee","age":"23","permissions":null,"type":"Student"},{"id":410,"name":"Willow","age":"19","permissions":true,"type":"Student"},{"id":522,"name":"David Malan","age":"29","permissions":true,"specialization":"OOP","type":"Teacher"}]

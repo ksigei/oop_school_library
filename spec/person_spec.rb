@@ -1,25 +1,23 @@
-require_relative '../person'
+require './person'
 
 describe Person do
-  before do
-    @person = Person.new(20)
-  end
+  context 'testing Person class' do
+    person = Person.new(name: 'Musk', age: 20, id: 1, parent_permission: true)
 
-  describe '#initialize' do
-    it 'initializes with an age' do
-      expect(@person.age).to eq(20)
+    it 'Person name should be Musk' do
+      expect(person.name).to eq('Musk')
     end
-  end
 
-  describe '#of_age?' do
-    it 'should return true if the person is of age' do
-      expect(@person.of_age?).to eq(true)
+    it 'Person age should be 20' do
+      expect(person.age).to eq(20)
     end
-  end
 
-  describe '#can_use_services?' do
-    it 'should return true if the person is of age' do
-      expect(@person.can_use_services?).to eq(true)
+    it 'Person id should be 1' do
+      expect(person.id).to eq(1)
+    end
+
+    it 'Person parent_permission should be true' do
+      expect(person.parent_permission).to eq(true)
     end
   end
 end

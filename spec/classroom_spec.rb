@@ -1,15 +1,23 @@
-require_relative '../classroom'
-require_relative '../person'
-require_relative '../student'
+require './class_room'
+require './student'
 
-describe Classroom do
-  before do
-    @classroom = Classroom.new('English')
-  end
+describe ClassRoom do
+  context 'testing ClassRoom class' do
+    classroom = ClassRoom.new(label: 'Rails')
+    student = Student.new(name: 'Sigei', age: 20, id: 1, parent_permission: true)
+    classroom.add_students(student)
 
-  describe '#initialize' do
-    it 'initializes with a label' do
-      expect(@classroom.label).to eq('English')
+    it 'should have a label' do
+      expect(classroom.label).to eq(label: 'Rails')
+    end
+
+    it 'should have at least one student' do
+      expect(classroom.students.length).to eq(1)
+    end
+
+    it 'should have a student' do
+      student_obj = classroom.students.first
+      expect(student_obj.name).to eq(student.name)
     end
   end
 end

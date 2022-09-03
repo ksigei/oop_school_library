@@ -1,14 +1,14 @@
-require_relative '../book'
+require './book'
 
 describe Book do
-  before do
-    @book = Book.new('The Great Gatsby', 'F. Scott Fitzgerald')
-  end
+  context 'testing Book class' do
+    book = Book.new(title: 'The Planet of Elixir', author: 'K.J Sigei', id: 1)
+    it 'Book title should return The Planet of Elixir' do
+      expect(book.title).to eq 'The Planet of Elixir'
+    end
 
-  describe '#initialize' do
-    it 'initializes with a title and author' do
-      expect(@book.title).to eq('The Great Gatsby')
-      expect(@book.author).to eq('F. Scott Fitzgerald')
+    it 'Book author should return K.J Sigei' do
+      expect(book.author).to eq 'K.J Sigei'
     end
   end
 end
